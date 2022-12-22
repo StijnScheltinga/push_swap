@@ -1,4 +1,4 @@
-SOURCES	=	helper_functions.c
+SOURCES	=	helper_functions.c index.c
 OBJECTS	=	$(SOURCES:.c=.o)
 NAME	=	push_swap_lib.a
 FLAGS	=	-Wall -Werror -Wextra
