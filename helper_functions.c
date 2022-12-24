@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   helper_functions.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: stijn <stijn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:37:20 by sschelti          #+#    #+#             */
-/*   Updated: 2022/12/22 11:59:35 by sschelti         ###   ########.fr       */
+/*   Updated: 2022/12/24 20:27:25 by stijn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,14 @@ t_list	*ft_lstnew(int value)
 	new->value = value;
 	new->next = NULL;
 	return (new);
+}
+
+t_list	*find_last(t_list **head)
+{
+	t_list	*last;
+
+	last = *head;
+	while (last->next != NULL)
+		last = last->next;
+	return (last);
 }

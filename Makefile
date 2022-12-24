@@ -1,7 +1,7 @@
-SOURCES	=	helper_functions.c index.c
-OBJECTS	=	$(SOURCES:.c=.o)
-NAME	=	push_swap_lib.a
-FLAGS	=	-Wall -Werror -Wextra
+SOURCES	=		helper_functions.c index.c
+OBJECTS	=		$(SOURCES:.c=.o)
+NAME	=		push_swap_lib.a
+FLAGS	=		-Wall -Werror -Wextra
 
 all: $(NAME)
 
@@ -24,4 +24,4 @@ fclean:
 re: fclean all
 
 test:
-	gcc $(flags) push_swap.c push_swap_lib.a -o push_swap && ./push_swap 10 25 50 100 500
+	gcc $(flags) push_swap.c push_swap_lib.a -o push_swap && ./push_swap 50 25 10 100 500
