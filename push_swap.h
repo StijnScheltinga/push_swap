@@ -6,7 +6,7 @@
 /*   By: stijn <stijn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:35:01 by sschelti          #+#    #+#             */
-/*   Updated: 2022/12/24 20:52:05 by stijn            ###   ########.fr       */
+/*   Updated: 2023/01/04 13:24:37 by stijn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,10 @@ int		ft_atoi(const char *str);
 void	ft_lstadd_back(t_list **head, t_list *new);
 void	printlist(t_list *node);
 void	get_index(t_list **head, int argc);
-void	set_first_to_last(t_list **head, t_list *first_node);
+void	rotate(t_list **head);
+void	push(t_list **head_a, t_list **head_b);
 void    make_lst_a(t_list **head_a, int argc, char **argv);
+void	push_swap(t_list **head_a, t_list **head_b);
+void    reverse_rotate(t_list **head);
 
 #endif
