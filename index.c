@@ -6,7 +6,7 @@
 /*   By: stijn <stijn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 13:01:06 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/04 12:48:38 by stijn            ###   ########.fr       */
+/*   Updated: 2023/01/08 17:17:54 by stijn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void	get_index(t_list **head, int argc)
 				position++;
 			check = check->next;
 		}
-	// printf("%d\n", position);
 	first_node->position = position;
 		rotate(head);
 	first_node = *head;

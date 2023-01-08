@@ -6,7 +6,7 @@
 /*   By: stijn <stijn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:35:01 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/04 13:24:37 by stijn            ###   ########.fr       */
+/*   Updated: 2023/01/08 21:05:39 by stijn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ void	get_index(t_list **head, int argc);
 void	rotate(t_list **head);
 void	push(t_list **head_a, t_list **head_b);
 void    make_lst_a(t_list **head_a, int argc, char **argv);
-void	push_swap(t_list **head_a, t_list **head_b);
+void	push_swap(t_list **head_a, t_list **head_b, int max_val);
 void    reverse_rotate(t_list **head);
+void    push_a(t_list **head_b, t_list **head_a);
 
 #endif

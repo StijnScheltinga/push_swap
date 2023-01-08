@@ -24,4 +24,4 @@ fclean:
 re: fclean all
 
 test:
-	gcc $(flags) push_swap.c push_swap_lib.a -o push_swap && ./push_swap 50
+	gcc $(flags) push_swap.c push_swap_lib.a -o push_swap && ./push_swap 930 7 32

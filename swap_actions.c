@@ -6,7 +6,7 @@
 /*   By: stijn <stijn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 22:14:17 by stijn             #+#    #+#             */
-/*   Updated: 2023/01/04 13:30:36 by stijn            ###   ########.fr       */
+/*   Updated: 2023/01/08 21:13:46 by stijn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,25 @@ void    reverse_rotate(t_list **head)
     before_last->next = NULL;
     *head = last;
     last->next = first_node;
+}
+
+void    push_a(t_list **head_b, t_list **head_a)
+{
+    int     i;
+    int     j;
+    t_list  *index;
+    
+    i = 0;
+    j = 0;
+    index = *head_b;
+    while (index != NULL)
+    {
+        i++;
+        index = index->next;
+    }
+    while (j != i)
+    {
+        push(head_b, head_a);
+        j++;
+    }
 }
