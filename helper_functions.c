@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   helper_functions.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stijn <stijn@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:37:20 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/08 21:13:19 by stijn            ###   ########.fr       */
+/*   Updated: 2023/01/09 15:56:25 by sschelti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,18 @@ t_list	*find_last(t_list **head)
 	while (last->next != NULL)
 		last = last->next;
 	return (last);
+}
+
+void	make_lst_a(t_list **head_a, int argc, char **argv)
+{
+	int		i;
+	t_list	*list_a;
+
+	i = 1;
+	while (i < argc)
+	{
+		list_a = ft_lstnew(ft_atoi(argv[i]));
+		ft_lstadd_back(head_a, list_a);
+		i++;
+	}
 }

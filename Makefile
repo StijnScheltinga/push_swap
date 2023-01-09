@@ -1,4 +1,4 @@
-SOURCES	=		helper_functions.c index.c make_lst_a.c swap_actions.c
+SOURCES	=		helper_functions.c index.c rotate.c push.c swap.c small_sort.c
 OBJECTS	=		$(SOURCES:.c=.o)
 NAME	=		push_swap_lib.a
 FLAGS	=		-Wall -Werror -Wextra
@@ -24,4 +24,7 @@ fclean:
 re: fclean all
 
 test:
-	gcc $(flags) push_swap.c push_swap_lib.a -o push_swap && ./push_swap 930 7 32
+	gcc $(flags) push_swap.c push_swap_lib.a -o push_swap && ./push_swap 1 90 142 42 53
+
+checker:
+	gcc $(flags) push_swap.c push_swap_lib.a -o push_swap && ./push_swap 1 50 -100 21 10 | ./checker_Mac 1 50 -100 21 10

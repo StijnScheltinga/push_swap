@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stijn <stijn@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:35:01 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/08 21:05:39 by stijn            ###   ########.fr       */
+/*   Updated: 2023/01/09 17:15:20 by sschelti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 typedef struct s_list
 {
 	int				value;
-	int				position;
+	int				index;
 	struct s_list	*next;
-}					t_list;
+}	t_list;
 
 t_list	*ft_lstnew(int value);
 t_list	*find_last(t_list **head);
@@ -29,11 +29,22 @@ int		ft_atoi(const char *str);
 void	ft_lstadd_back(t_list **head, t_list *new);
 void	printlist(t_list *node);
 void	get_index(t_list **head, int argc);
-void	rotate(t_list **head);
-void	push(t_list **head_a, t_list **head_b);
-void    make_lst_a(t_list **head_a, int argc, char **argv);
+void	ra(t_list **head_a);
+void	rb(t_list **head_b);
+void	rotate(t_list **head_b);
+void	pa(t_list **head_a, t_list **head_b);
+void	pb(t_list **head_a, t_list **head_b);
+void	make_lst_a(t_list **head_a, int argc, char **argv);
 void	push_swap(t_list **head_a, t_list **head_b, int max_val);
-void    reverse_rotate(t_list **head);
-void    push_a(t_list **head_b, t_list **head_a);
+void	rra(t_list **head_a);
+void	rrb(t_list **head_b);
+void	push_a(t_list **head_b, t_list **head_a);
+void	sa(t_list **head_a);
+void	sb(t_list **head_b);
+void	sort_three(t_list **head_a);
+void	sort_two_a(t_list **head_a);
+void	sort_two_b(t_list **head_b);
+void	sort_four(t_list **head_a, t_list **head_b);
+void	sort_five(t_list **head_a, t_list **head_b);
 
 #endif
