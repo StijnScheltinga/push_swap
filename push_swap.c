@@ -6,7 +6,7 @@
 /*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:32:35 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/09 17:16:32 by sschelti         ###   ########.fr       */
+/*   Updated: 2023/01/10 14:09:28 by sschelti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	push_swap(t_list **head_a, t_list **head_b, int max_val)
 				pb(head_a, head_b);
 			else
 				ra(head_a);
-			i++;	
+			i++;
 		}
 		push_a(head_b, head_a);
 		i = 0;
@@ -62,15 +62,18 @@ int	main(int argc, char **argv)
 {
 	t_list	*head_a;
 	t_list	*head_b;
+	int		check;
 
 	head_a = NULL;
 	head_b = NULL;
+	check = input_check(argc, argv);
+	if (check == 0)
+	{
+		ft_printf("error\n");
+		return (0);
+	}
 	make_lst_a(&head_a, argc, argv);
 	get_index(&head_a, argc);
 	sort_type(&head_a, &head_b, argc);
-	// printf("list a:\n");
-	// printlist(head_a);
-	// printf("list b:\n");
-	// printlist(head_b);
 	return (0);
 }

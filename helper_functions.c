@@ -6,7 +6,7 @@
 /*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:37:20 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/09 15:56:25 by sschelti         ###   ########.fr       */
+/*   Updated: 2023/01/10 14:11:54 by sschelti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	printlist(t_list *node)
 {
 	while (node != NULL)
 	{
-		printf("%d\n", node->value);
+		ft_printf("%d\n", node->value);
 		node = node->next;
 	}
 }

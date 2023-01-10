@@ -6,7 +6,7 @@
 /*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 22:14:17 by stijn             #+#    #+#             */
-/*   Updated: 2023/01/09 16:18:56 by sschelti         ###   ########.fr       */
+/*   Updated: 2023/01/10 14:10:55 by sschelti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ra(t_list **head_a)
 	*head_a = first_node->next;
 	first_node->next = NULL;
 	last->next = first_node;
-	printf("ra\n");
+	ft_printf("ra\n");
 }
 
 void	rb(t_list **head_b)
@@ -35,7 +35,7 @@ void	rb(t_list **head_b)
 	*head_b = first_node->next;
 	first_node->next = NULL;
 	last->next = first_node;
-	printf("rb\n");
+	ft_printf("rb\n");
 }
 
 void	rotate(t_list **head_b)
@@ -64,7 +64,7 @@ void	rra(t_list **head_a)
 	before_last->next = NULL;
 	*head_a = last;
 	last->next = first_node;
-	printf("rra\n");
+	ft_printf("rra\n");
 }
 
 void	rrb(t_list **head_b)
@@ -81,5 +81,5 @@ void	rrb(t_list **head_b)
 	before_last->next = NULL;
 	*head_b = last;
 	last->next = first_node;
-	printf("rrb\n");
+	ft_printf("rrb\n");
 }

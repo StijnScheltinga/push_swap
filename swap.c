@@ -6,7 +6,7 @@
 /*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 16:07:42 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/09 16:19:49 by sschelti         ###   ########.fr       */
+/*   Updated: 2023/01/10 14:11:33 by sschelti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	sa(t_list **head_a)
 	first->next = second->next;
 	second->next = first;
 	*head_a = second;
-	printf("sa\n");
+	ft_printf("sa\n");
 }
 
 void	sb(t_list **head_a)
@@ -35,5 +35,5 @@ void	sb(t_list **head_a)
 	first->next = second->next;
 	second->next = first;
 	*head_a = second;
-	printf("sb\n");
+	ft_printf("sb\n");
 }

@@ -6,7 +6,7 @@
 /*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 10:50:38 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/09 18:00:18 by sschelti         ###   ########.fr       */
+/*   Updated: 2023/01/10 11:12:41 by sschelti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,6 @@ void	sort_three(t_list **head_a)
 	t_list	*first;
 
 	first = *head_a;
-	if (first->index > first->next->index
-		&& first->next->index > find_last(head_a)->index)
-		return ;
 	if (first->index < first->next->index)
 	{
 		if (first->index > find_last(head_a)->index)
