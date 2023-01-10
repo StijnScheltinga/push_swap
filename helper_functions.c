@@ -6,7 +6,7 @@
 /*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:37:20 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/10 14:11:54 by sschelti         ###   ########.fr       */
+/*   Updated: 2023/01/10 15:02:24 by sschelti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,20 @@ void	printlist(t_list *node)
 	{
 		ft_printf("%d\n", node->value);
 		node = node->next;
+	}
+}
+
+void	free_lst_a(t_list **head_a)
+{
+	t_list	*first;
+	t_list	*temp;
+
+	while (*head_a != NULL)
+	{
+		first = *head_a;
+		temp = first->next;
+		free(first);
+		*head_a = temp;
 	}
 }
 

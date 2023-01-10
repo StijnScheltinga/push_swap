@@ -6,7 +6,7 @@
 /*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:35:01 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/10 14:10:15 by sschelti         ###   ########.fr       */
+/*   Updated: 2023/01/10 14:56:51 by sschelti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ t_list		*find_last(t_list **head);
 long long	ft_atoi(const char *str);
 void		ft_lstadd_back(t_list **head, t_list *new);
 void		printlist(t_list *node);
+void		free_lst_a(t_list **head_a);
 void		get_index(t_list **head, int argc);
 void		ra(t_list **head_a);
 void		rb(t_list **head_b);
