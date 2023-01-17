@@ -6,7 +6,7 @@
 /*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:35:01 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/12 12:29:08 by sschelti         ###   ########.fr       */
+/*   Updated: 2023/01/17 13:34:25 by sschelti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include <stdlib.h>
+# include <unistd.h>
 # include <limits.h>
 
 typedef struct s_list

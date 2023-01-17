@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/09 16:07:42 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/17 13:31:32 by sschelti         ###   ########.fr       */
+/*   Created: 2023/01/17 13:19:57 by sschelti          #+#    #+#             */
+/*   Updated: 2023/01/17 15:25:09 by sschelti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(t_list **head_a)
+long long	ft_atoi(const char *str)
 {
-	t_list	*first;
-	t_list	*second;
+	long long	res;
+	int			neg;
+	int			i;
 
-	first = *head_a;
-	second = first->next;
-	first->next = second->next;
-	second->next = first;
-	*head_a = second;
-	write(1, "sa\n", 3);
-}
-
-void	sb(t_list **head_a)
-{
-	t_list	*first;
-	t_list	*second;
-
-	first = *head_a;
-	second = first->next;
-	first->next = second->next;
-	second->next = first;
-	*head_a = second;
-	write(1, "sb\n", 3);
+	res = 0;
+	neg = 1;
+	i = 0;
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			neg = -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res = res * 10 + (str[i] - '0');
+		i++;
+	}
+	return (res * neg);
 }

@@ -1,33 +1,27 @@
-SOURCES	=		helper_functions.c index.c rotate.c push.c swap.c small_sort.c error_handling.c push_swap.c
-OBJECTS	=		$(SOURCES:.c=.o)
+SOURCES	=		helper_functions.c index.c rotate.c push.c swap.c small_sort.c error_handling.c push_swap.c ft_atoi.c
+BUILD	=		build
+OBJECTS	=		$(addprefix $(BUILD)/, $(SOURCES:.c=.o))
 NAME	=		push_swap
 FLAGS	=		-Wall -Werror -Wextra
-PRINTF	=		printf/libftprintf.a
-CC		=		gcc -g
+CC		=		gcc
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS) $(PRINTF)
-	$(CC) $(flags) -o $(NAME) $(OBJECTS) $(PRINTF)
+$(NAME): $(OBJECTS)
+	$(CC) $(flags) -o $(NAME) $(OBJECTS)
 
-$(PRINTF):
-	$(MAKE) -C printf
-
-%.o: %.c
+$(BUILD)/%.o: %.c | $(BUILD)
 	gcc $(FLAGS) -c $< -o $@
 
+$(BUILD):
+	@mkdir -p $(BUILD)
+
 clean:
-	(cd printf && make clean)
 	rm -rf $(OBJECTS)
+	rm -rf $(BUILD)
 
 fclean:
-	rm -f $(OBJECTS) $(NAME)
-	(cd printf && make fclean)
+	rm -rf $(OBJECTS) $(NAME)
+	rm -rf $(BUILD)
 
 re: fclean all
-
-test:
-	./push_swap 100 2147483647 50
-
-checker:
-	./push_swap 1 2 3 4 5 | ./checker_mac 2 1

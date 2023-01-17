@@ -6,7 +6,7 @@
 /*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 14:57:27 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/10 14:10:31 by sschelti         ###   ########.fr       */
+/*   Updated: 2023/01/17 13:29:02 by sschelti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	pb(t_list **head_a, t_list **head_b)
 	*head_a = first_node->next;
 	first_node->next = *head_b;
 	*head_b = first_node;
-	ft_printf("pb\n");
+	write(1, "pb\n", 3);
 }
 
 void	pa(t_list **head_b, t_list **head_a)
@@ -35,7 +35,7 @@ void	pa(t_list **head_b, t_list **head_a)
 	*head_b = first_node->next;
 	first_node->next = *head_a;
 	*head_a = first_node;
-	ft_printf("pa\n");
+	write(1, "pa\n", 3);
 }
 
 void	push_a(t_list **head_b, t_list **head_a)

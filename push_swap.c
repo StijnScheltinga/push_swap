@@ -6,7 +6,7 @@
 /*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:32:35 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/17 12:09:11 by sschelti         ###   ########.fr       */
+/*   Updated: 2023/01/17 14:04:49 by sschelti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,12 +71,11 @@ int	main(int argc, char **argv)
 		return (0);
 	if (check == 0)
 	{
-		ft_printf("Error\n");
+		write(1, "Error\n", 6);
 		return (0);
 	}
 	make_lst_a(&head_a, argc, argv);
 	get_index(&head_a, argc);
 	sort_type(&head_a, &head_b, argc);
 	free_lst_a(&head_a);
-	return (0);
 }
