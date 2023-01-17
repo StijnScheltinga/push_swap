@@ -1,14 +1,17 @@
-SOURCES	=		helper_functions.c index.c rotate.c push.c swap.c small_sort.c error_handling.c
+SOURCES	=		helper_functions.c index.c rotate.c push.c swap.c small_sort.c error_handling.c push_swap.c
 OBJECTS	=		$(SOURCES:.c=.o)
-NAME	=		push_swap_lib.a
+NAME	=		push_swap
 FLAGS	=		-Wall -Werror -Wextra
+PRINTF	=		printf/libftprintf.a
+CC		=		gcc -g
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS)
+$(NAME): $(OBJECTS) $(PRINTF)
+	$(CC) $(flags) -o $(NAME) $(OBJECTS) $(PRINTF)
+
+$(PRINTF):
 	$(MAKE) -C printf
-	cp printf/libftprintf.a $(NAME)
-	ar rcs $(NAME) $(OBJECTS)
 
 %.o: %.c
 	gcc $(FLAGS) -c $< -o $@
@@ -24,7 +27,7 @@ fclean:
 re: fclean all
 
 test:
-	gcc $(flags) push_swap.c push_swap_lib.a -o push_swap && ./push_swap 19 149 10 50 2147483647
+	./push_swap 100 2147483647 50
 
 checker:
-	gcc $(flags) push_swap.c push_swap_lib.a -o push_swap && ./push_swap 1 90 149 4 2147483648 | ./checker_mac 1 90 149 4 2147483648
+	./push_swap 1 2 3 4 5 | ./checker_mac 2 1

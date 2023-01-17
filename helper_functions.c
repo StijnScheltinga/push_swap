@@ -6,20 +6,11 @@
 /*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:37:20 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/10 15:02:24 by sschelti         ###   ########.fr       */
+/*   Updated: 2023/01/12 12:28:58 by sschelti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	printlist(t_list *node)
-{
-	while (node != NULL)
-	{
-		ft_printf("%d\n", node->value);
-		node = node->next;
-	}
-}
 
 void	free_lst_a(t_list **head_a)
 {

@@ -6,7 +6,7 @@
 /*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 11:20:49 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/10 15:20:11 by sschelti         ###   ########.fr       */
+/*   Updated: 2023/01/12 12:26:48 by sschelti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ int	input_check(int argc, char **argv)
 			return (0);
 		while (argv[i][j])
 		{
-			if (!(argv[i][j] >= '0' || argv[i][j] <= '9' || argv[i][j] == '-'))
+			if (!((argv[i][j] >= '0' && argv[i][j] <= '9')
+			|| argv[i][j] == '-'))
 				return (0);
 			j++;
 		}
