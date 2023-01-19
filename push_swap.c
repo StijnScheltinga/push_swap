@@ -6,7 +6,7 @@
 /*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:32:35 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/19 12:55:09 by sschelti         ###   ########.fr       */
+/*   Updated: 2023/01/19 15:38:22 by sschelti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,18 +62,15 @@ int	main(int argc, char **argv)
 {
 	t_list	*head_a;
 	t_list	*head_b;
-	int		check;
 
 	head_a = NULL;
 	head_b = NULL;
-	check = input_check(argc, argv);
 	if (argc == 1)
 		return (0);
-	if (check == 0)
-	{
-		write(1, "Error\n", 6);
+	if (input_check(argc, argv) == 0)
+		return (write(1, "Error\n", 6), 0);
+	if (argc == 2)
 		return (0);
-	}
 	make_lst_a(&head_a, argc, argv);
 	get_index(&head_a, argc);
 	if (sorted_check(&head_a) == 1)
