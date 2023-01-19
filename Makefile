@@ -1,4 +1,4 @@
-SOURCES	=		helper_functions.c index.c rotate.c push.c swap.c small_sort.c error_handling.c push_swap.c ft_atoi.c
+SOURCES	=		helper_functions.c index.c rotate.c push.c swap.c small_sort.c error_handling.c push_swap.c ft_atoi.c sorted_check.c
 BUILD	=		build
 OBJECTS	=		$(addprefix $(BUILD)/, $(SOURCES:.c=.o))
 NAME	=		push_swap
@@ -17,11 +17,9 @@ $(BUILD):
 	@mkdir -p $(BUILD)
 
 clean:
-	rm -rf $(OBJECTS)
-	rm -rf $(BUILD)
+	rm -rf $(OBJECTS) $(BUILD)
 
 fclean:
-	rm -rf $(OBJECTS) $(NAME)
-	rm -rf $(BUILD)
+	rm -rf $(OBJECTS) $(NAME) $(BUILD)
 
 re: fclean all

@@ -6,7 +6,7 @@
 /*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:35:01 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/17 13:34:25 by sschelti         ###   ########.fr       */
+/*   Updated: 2023/01/19 12:36:41 by sschelti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,6 @@ void		sort_five(t_list **head_a, t_list **head_b);
 int			input_check(int argc, char **argv);
 int			duplicate_check(int argc, char **argv);
 int			ft_printf(const char *str, ...);
+int			sorted_check(t_list **head_a);
 
 #endif
