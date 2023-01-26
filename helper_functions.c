@@ -6,7 +6,7 @@
 /*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:37:20 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/12 12:28:58 by sschelti         ###   ########.fr       */
+/*   Updated: 2023/01/23 16:54:00 by sschelti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ t_list	*find_last(t_list **head)
 	return (last);
 }
 
-void	make_lst_a(t_list **head_a, int argc, char **argv)
+int	make_lst_a(t_list **head_a, int argc, char **argv)
 {
 	int		i;
 	t_list	*list_a;
@@ -72,7 +72,10 @@ void	make_lst_a(t_list **head_a, int argc, char **argv)
 	while (i < argc)
 	{
 		list_a = ft_lstnew(ft_atoi(argv[i]));
+		if (list_a == NULL)
+			return (0);
 		ft_lstadd_back(head_a, list_a);
 		i++;
 	}
+	return (1);
 }

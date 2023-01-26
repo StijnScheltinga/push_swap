@@ -6,7 +6,7 @@
 /*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:35:01 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/19 16:09:26 by sschelti         ###   ########.fr       */
+/*   Updated: 2023/01/23 16:59:36 by sschelti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void		rb(t_list **head_b);
 void		rotate(t_list **head_b);
 void		pa(t_list **head_a, t_list **head_b);
 void		pb(t_list **head_a, t_list **head_b);
-void		make_lst_a(t_list **head_a, int argc, char **argv);
+int			make_lst_a(t_list **head_a, int argc, char **argv);
 void		push_swap(t_list **head_a, t_list **head_b, int max_val);
 void		rra(t_list **head_a);
 void		rrb(t_list **head_b);
@@ -49,7 +49,6 @@ void		sort_four(t_list **head_a, t_list **head_b);
 void		sort_five(t_list **head_a, t_list **head_b);
 int			input_check(int argc, char **argv);
 int			duplicate_check(int argc, char **argv);
-int			ft_printf(const char *str, ...);
 int			sorted_check(t_list **head_a);
 
 #endif

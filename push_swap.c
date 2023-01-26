@@ -6,11 +6,16 @@
 /*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:32:35 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/19 15:38:22 by sschelti         ###   ########.fr       */
+/*   Updated: 2023/01/23 17:00:35 by sschelti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	leaks(void)
+{
+	system("leaks push_swap");
+}
 
 void	push_swap(t_list **head_a, t_list **head_b, int max_val)
 {	
@@ -71,10 +76,12 @@ int	main(int argc, char **argv)
 		return (write(1, "Error\n", 6), 0);
 	if (argc == 2)
 		return (0);
-	make_lst_a(&head_a, argc, argv);
-	get_index(&head_a, argc);
-	if (sorted_check(&head_a) == 1)
-		return (0);
-	sort_type(&head_a, &head_b, argc);
+	if (make_lst_a(&head_a, argc, argv) == 1)
+	{
+		get_index(&head_a, argc);
+		if (sorted_check(&head_a) == 0)
+			sort_type(&head_a, &head_b, argc);
+	}
 	free_lst_a(&head_a);
+	atexit(leaks);
 }
