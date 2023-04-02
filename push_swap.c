@@ -3,19 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sschelti <sschelti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: stijn <stijn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:32:35 by sschelti          #+#    #+#             */
-/*   Updated: 2023/01/23 17:00:35 by sschelti         ###   ########.fr       */
+/*   Updated: 2023/04/02 23:21:21 by stijn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	leaks(void)
-{
-	system("leaks push_swap");
-}
 
 void	push_swap(t_list **head_a, t_list **head_b, int max_val)
 {	
@@ -83,5 +78,4 @@ int	main(int argc, char **argv)
 			sort_type(&head_a, &head_b, argc);
 	}
 	free_lst_a(&head_a);
-	atexit(leaks);
 }
