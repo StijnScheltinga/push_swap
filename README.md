@@ -1,7 +1,7 @@
 # push_swap 
 push_swap is a project in the 42 network curriculum.
 The program takes a list of integers as input and sorts them using two stacks and a set of instructions. 
-The goal is to sort the list with the minimum number of instructions possible. This project introduces the concepts of linked lists and sorting algorithms.
+The goal is to sort the list with the minimum number of instructions possible.
 
 ## run push_swap
 
